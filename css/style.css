@@ -1,0 +1,80 @@
+/* --- Estilo Personalizado "Clean Tech" --- */
+        :root {
+            --primary-color: #0A2540; /* Azul Profundo (Confiança) */
+            --accent-color: #0d6efd;  /* Azul Elétrico (Ação/Tech) */
+            --bg-light: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A1B25;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px; /* Botões arredondados modernos */
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+        }
+
+        /* Seção Hero */
+        .hero-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px 0;
+        }
+
+        /* Cards de Problemas */
+        .problem-card {
+            border: none;
+            border-radius: 15px;
+            padding: 2rem;
+            height: 100%;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Seção "A Ponte" (Dark) */
+        .bridge-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+        }
+        .bridge-section h2 {
+            color: white;
+        }
+
+        /* Imagens (Placeholders) */
+        .img-rounded-custom {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
