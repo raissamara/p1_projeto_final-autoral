@@ -16,7 +16,7 @@
 
 <body>
     
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: white;">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">SeuLogo<span class="text-primary">.IA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -24,11 +24,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#problemas">Problemas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#solucoes">Soluções</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                     <li class="nav-item ms-lg-3">
-                        <a href="#contato" class="btn btn-primary">Agendar Diagnóstico</a>
+                        <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle me-1"></i> Área do Cliente
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="btn btn-primary">Diagnóstico Gratuito</a>
                     </li>
                 </ul>
             </div>
@@ -39,17 +43,55 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h1 class="display-4 mb-3">Pare de perder tempo com tarefas manuais.</h1>
+                    <h1 class="display-4 mb-3 fw-bold" style="color: var(--primary-color); padding-top: 50px;">Sua empresa no piloto automático.</h1>
                     <p class="lead mb-4 text-secondary">
-                        Transforme processos chatos em sistemas automáticos e use Chatbots com IA para vender 24/7. Deixe a tecnologia trabalhar enquanto você cresce.
+                        Integre seus sistemas com <strong>n8n</strong> e atenda seus clientes 24/7 com <strong>Chatbots inteligentes</strong>. Pare de perder tempo com o operacional e foque na estratégia.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="#contato" class="btn btn-primary btn-lg">Quero Automatizar</a>
-                        <a href="#solucoes" class="btn btn-outline-dark btn-lg rounded-pill">Como funciona?</a>
+                        <a href="#contato" class="btn btn-primary btn-lg shadow">Começar Agora</a>
+                        <a href="#solucoes" class="btn btn-outline-dark btn-lg rounded-pill border-0 bg-white">Ver Soluções</a>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://placehold.co/600x400/0A2540/FFF?text=Fluxo+de+Automação+Visual" alt="Automação Visual" class="img-fluid img-rounded-custom">
+                
+                <div class="col-lg-6">
+                    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://placehold.co/600x400/0A2540/FFF?text=Fluxos+Complexos+no+n8n" class="d-block w-100" alt="Automação n8n">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Automação de Processos</h5>
+                                    <p>Conecte CRM, Planilhas e Email automaticamente.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/600x400/444/FFF?text=Chatbot+com+IA+no+WhatsApp" class="d-block w-100" alt="Chatbot IA">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Atendimento 24/7</h5>
+                                    <p>Responda e venda enquanto você dorme.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/600x400/003366/FFF?text=Dashboards+e+Resultados" class="d-block w-100" alt="Resultados">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Controle Total</h5>
+                                    <p>Visualize seus dados em tempo real.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,29 +100,28 @@
     <section id="problemas" class="py-5 bg-white">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <h2 class="mb-3">Sua empresa sofre com "vazamentos" de produtividade?</h2>
-                <p class="text-muted">Se você respondeu "sim" para algum destes itens, nós precisamos conversar.</p>
+                <h2 class="mb-3">Identifique seus gargalos</h2>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="problem-card text-center">
                         <div class="icon-box"><i class="bi bi-clipboard-data"></i></div>
                         <h4>Trabalho Manual</h4>
-                        <p class="text-muted">Sua equipe perde horas copiando dados de planilhas para sistemas, enviando emails repetitivos e gerando relatórios na mão.</p>
+                        <p class="text-muted small">Chega de copiar e colar dados entre planilhas.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="problem-card text-center">
                         <div class="icon-box"><i class="bi bi-alarm"></i></div>
-                        <h4>Leads Perdidos</h4>
-                        <p class="text-muted">O cliente chama às 20h, ninguém responde, e ele compra no concorrente. Seu atendimento não escala fora do horário comercial.</p>
+                        <h4>Falta de Tempo</h4>
+                        <p class="text-muted small">Automatize o rotineiro e foque no estratégico.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="problem-card text-center">
-                        <div class="icon-box"><i class="bi bi-puzzle"></i></div>
-                        <h4>Sistemas Desconectados</h4>
-                        <p class="text-muted">Seu site não fala com seu CRM, que não fala com seu WhatsApp. A informação fica espalhada e impossível de gerenciar.</p>
+                        <div class="icon-box"><i class="bi bi-robot"></i></div>
+                        <h4>Atendimento Lento</h4>
+                        <p class="text-muted small">Não deixe seu cliente esperando resposta.</p>
                     </div>
                 </div>
             </div>
@@ -89,135 +130,79 @@
 
     <section id="solucoes" class="py-5 bg-light">
         <div class="container py-5">
-            
             <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <span class="badge bg-primary mb-2">Automação de Processos</span>
-                    <h3>O Fim do Trabalho Repetitivo com n8n</h3>
-                    <p class="lead text-muted">Imagine conectar todos os seus apps como se fossem peças de LEGO.</p>
-                    <p>O <strong>n8n</strong> é uma ferramenta poderosa que cria "canos digitais" entre seus softwares. Quando algo acontece (um novo pedido), ele dispara uma reação em cadeia automática (emite nota, avisa estoque, manda email).</p>
-                    <ul class="list-unstyled mt-3">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Integração total (CRM, Email, Planilhas)</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Zero erro humano na cópia de dados</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Funciona 24h sem parar</li>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold">Potência do n8n</h3>
+                    <p class="text-muted">Integramos suas ferramentas favoritas criando um ecossistema único.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-lg text-primary"></i> Webhooks e APIs</li>
+                        <li><i class="bi bi-check-lg text-primary"></i> Processamento de dados complexos</li>
                     </ul>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 text-center">
-                    <img src="https://placehold.co/550x350/DDD/333?text=Interface+n8n+Workflow" class="img-fluid img-rounded-custom" alt="n8n workflow">
-                </div>
-            </div>
-
-            <hr class="my-5 opacity-25">
-
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="https://placehold.co/300x550/EEE/333?text=Chat+Mobile+IA" class="img-fluid img-rounded-custom" style="max-height: 500px;" alt="Chatbot Mobile">
                 </div>
                 <div class="col-lg-6">
-                    <span class="badge bg-success mb-2">Inteligência Artificial</span>
-                    <h3>Atendimento Imediato e Inteligente</h3>
-                    <p class="lead text-muted">Não use robôs que irritam. Use IAs que conversam.</p>
-                    <p>Nossos Chatbots com IA entendem a linguagem natural. Eles não apenas respondem dúvidas frequentes, mas qualificam o lead fazendo as perguntas certas antes de passar para um humano.</p>
-                    <ul class="list-unstyled mt-3">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Respostas instantâneas no WhatsApp/Site</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Qualificação automática de leads</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Transbordo humanizado quando necessário</li>
-                    </ul>
+                     <img src="https://placehold.co/500x300/EEE/333?text=Workflow+Visual" class="img-fluid rounded shadow" alt="Workflow">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bridge-section text-center">
+    <section id="contato" class="py-5 bg-white text-center">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="mb-4">"Ter a ferramenta não resolve o problema..."</h2>
-                    <p class="fs-5 opacity-75">
-                        É como ter um carro de Fórmula 1 e não saber pilotar. Uma automação mal feita pode gerar caos. <br>
-                        O meu trabalho não é vender software. <strong>É desenhar a estratégia e implementar a solução técnica</strong> para que você tenha resultados reais.
-                    </p>
-                </div>
-            </div>
+            <h2 class="mb-4">Vamos automatizar seu negócio?</h2>
+            <button class="btn btn-primary btn-lg">Falar com Especialista</button>
         </div>
     </section>
 
-    <section id="servicos" class="py-5 bg-white">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2>Como eu posso te ajudar</h2>
-                <p class="text-muted">Serviços sob medida para o seu momento.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-3">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Consultoria & Diagnóstico</h5>
-                            <p class="card-text text-muted mt-3">Análise profunda dos seus processos atuais para identificar gargalos e desenhar o mapa da automação.</p>
-                            <hr>
-                            <ul class="list-unstyled small">
-                                <li class="mb-2">✅ Mapeamento de processos</li>
-                                <li class="mb-2">✅ Definição de ferramentas</li>
-                                <li class="mb-2">✅ Cálculo de ROI</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-primary shadow p-3" style="border-width: 2px;">
-                        <div class="card-body">
-                            <div class="badge bg-primary mb-2">Mais Popular</div>
-                            <h5 class="card-title fw-bold">Implementação Completa</h5>
-                            <p class="card-text text-muted mt-3">Mão na massa. Eu construo os fluxos no n8n, configuro o Chatbot e integro seus sistemas.</p>
-                            <hr>
-                            <ul class="list-unstyled small">
-                                <li class="mb-2">✅ Criação de workflows n8n</li>
-                                <li class="mb-2">✅ Treinamento da IA do Bot</li>
-                                <li class="mb-2">✅ Testes e validação</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-3">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Suporte & Evolução</h5>
-                            <p class="card-text text-muted mt-3">A tecnologia muda rápido. Garanto que suas automações continuem rodando e evoluindo.</p>
-                            <hr>
-                            <ul class="list-unstyled small">
-                                <li class="mb-2">✅ Monitoramento de erros</li>
-                                <li class="mb-2">✅ Ajustes finos</li>
-                                <li class="mb-2">✅ Novas funcionalidades</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <h2 class="mb-4">Pronto para colocar seu negócio no piloto automático?</h2>
-                    <p class="lead mb-4">Agende uma conversa rápida de 30 minutos. Sem compromisso de venda, apenas para entender se posso te ajudar.</p>
-                    <button class="btn btn-primary btn-lg px-5 py-3">
-                        <i class="bi bi-calendar-event me-2"></i> Agendar Diagnóstico Gratuito
-                    </button>
-                    <p class="mt-3 small text-muted">Ou me chame no WhatsApp para dúvidas rápidas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white py-4 text-center">
+    <footer class="bg-dark text-white py-3 text-center small">
         <div class="container">
-            <p class="mb-0">&copy; 2024 Seu Nome - Especialista em Automação e IA.</p>
+            <p class="mb-0">Todos os direitos reservados &copy; 2024. Política de Privacidade.</p>
         </div>
     </footer>
 
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="loginModalLabel">Acesso ao Painel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label small text-muted fw-bold">E-MAIL CORPORATIVO</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="nome@empresa.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="passwordInput" class="form-label small text-muted fw-bold">SENHA</label>
+                            <input type="password" class="form-control" id="passwordInput" placeholder="******">
+                            <div class="text-end mt-1">
+                                <a href="#" class="text-decoration-none small text-primary">Esqueceu a senha?</a>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-light border rounded p-3 mb-3 bg-light">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="lgpdCheck" required>
+                                <label class="form-check-label small" for="lgpdCheck">
+                                    <strong>Concordo com os Termos de Uso e Privacidade.</strong><br>
+                                    Estou ciente de que meus dados serão processados para fins de autenticação e segurança, em conformidade com a <strong>LGPD (Lei n.º 13.709/2018)</strong>.
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary py-2">Entrar no Sistema</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center bg-light rounded-bottom">
+                    <p class="small mb-0 text-muted">Ainda não é cliente? <a href="#contato" class="text-primary fw-bold text-decoration-none" data-bs-dismiss="modal">Solicite uma demo</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
 </html>
